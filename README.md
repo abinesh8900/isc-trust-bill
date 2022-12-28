@@ -1,3 +1,8 @@
+Local setup 
+
+node - 18.12.1
+nvm - 8.19.2
+react - 18.2.0
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
