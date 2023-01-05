@@ -21,7 +21,7 @@ function BillInput() {
 
     doc.html(reportTemplateRef.current, {
       async callback(doc) {
-        await doc.save("document");
+        await doc.save(`${billDetails.name}-${billDetails.date}`);
       },
     });
 
@@ -86,7 +86,7 @@ function BillInput() {
         <button className="button" onClick={handleGeneratePdf}>
           Generate PDF
         </button>
-        <div ref={reportTemplateRef}>
+        <div ref={reportTemplateRef} className="pdf">
           {billInfo.data ? (
             <BillContent data={billInfo.data}></BillContent>
           ) : null}
