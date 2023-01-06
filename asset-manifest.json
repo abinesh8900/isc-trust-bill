@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/isc-trust-bill/static/css/main.c157e934.css",
+    "main.js": "/isc-trust-bill/static/js/main.64f9389a.js",
+    "static/js/498.03ec5a67.chunk.js": "/isc-trust-bill/static/js/498.03ec5a67.chunk.js",
+    "static/js/703.17ef010e.chunk.js": "/isc-trust-bill/static/js/703.17ef010e.chunk.js",
+    "static/js/148.1ab3a4fe.chunk.js": "/isc-trust-bill/static/js/148.1ab3a4fe.chunk.js",
+    "static/js/787.2f155b0a.chunk.js": "/isc-trust-bill/static/js/787.2f155b0a.chunk.js",
+    "static/media/logo.png": "/isc-trust-bill/static/media/logo.a981827b0b4f537c4dd1.png",
+    "index.html": "/isc-trust-bill/index.html",
+    "main.c157e934.css.map": "/isc-trust-bill/static/css/main.c157e934.css.map",
+    "main.64f9389a.js.map": "/isc-trust-bill/static/js/main.64f9389a.js.map",
+    "498.03ec5a67.chunk.js.map": "/isc-trust-bill/static/js/498.03ec5a67.chunk.js.map",
+    "703.17ef010e.chunk.js.map": "/isc-trust-bill/static/js/703.17ef010e.chunk.js.map",
+    "148.1ab3a4fe.chunk.js.map": "/isc-trust-bill/static/js/148.1ab3a4fe.chunk.js.map",
+    "787.2f155b0a.chunk.js.map": "/isc-trust-bill/static/js/787.2f155b0a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c157e934.css",
+    "static/js/main.64f9389a.js"
+  ]
+}
