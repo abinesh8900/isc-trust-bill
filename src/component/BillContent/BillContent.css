@@ -1,56 +1,55 @@
+.pfd-content {
+  text-align: center;
+  height: 589px;
+  padding: 20px;
+  /* border: 1px solid; */
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+}
+.p-5 {
+  padding: 10px;
+}
+.logo {
+  height: 80px;
+  width: auto;
+}
+.trust-name {
+  font-size: 22px;
+  color: #ee7a09;
+  margin: 20px 0 3px 0;
+}
 
-.pfd-content{
-    text-align: center;
-    height: 567px;
-    padding: 20px;
-    border: 1px solid;
-    font-family: Arial, Helvetica, sans-serif;
-    position: relative;
+.reg-num {
+  margin: 0 0 22px 0;
+  font-size: 12px;
 }
-.p-5{
-    padding: 10px;
+.content-heading {
+  border-bottom: 1px solid #ee7a09;
+  margin: 5px 0;
+  color: #ee7a09;
+  display: inline-block;
 }
-.logo{
-    height: 80px;
-    width: auto;
+.content-main {
+  font-size: 11px;
+  line-height: 1.2rem;
+  letter-spacing: 0.4px;
 }
-.trust-name{
-    font-size: 22px;
-    color: #ee7a09;
-    margin: 20px 0 3px 0;
+.pdf-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
-
-.reg-num{
-    margin: 0 0 22px 0;
-    font-size: 12px;
+.place-date > p {
+  margin: 0;
 }
-.content-heading{
-    border-bottom: 1px solid #ee7a09;
-    margin: 5px 0;
-    color: #ee7a09;
-    display: inline-block;   
+.sign > p {
+  margin: 0;
 }
-.content-main{
-    font-size: 11px;
-    line-height: 1.2rem;
-    letter-spacing: 0.4px;
+.foot_area {
+  position: absolute;
+  bottom: 2%;
+  width: 91%;
 }
-.pdf-footer{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-}
-.place-date > p{
-    margin: 0;
-}
-.sign > p{
-    margin: 0;
-}
-.foot_area{
-    position: absolute;
-    bottom: 2%;
-    width: 91%;
-}
-.place-date{
-    text-align: left;
+.place-date {
+  text-align: left;
 }

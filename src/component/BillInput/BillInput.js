@@ -3,17 +3,27 @@ import "./BillInput.css";
 import BillContent from "../BillContent/BillContent";
 import { useRef } from "react";
 import jsPDF from "jspdf";
-import { ToWords } from 'to-words';
+import { ToWords } from "to-words";
 
 function BillInput() {
   const reportTemplateRef = useRef(null);
   const toWords = new ToWords();
 
   const handleGeneratePdf = () => {
+    console.log(billDetails);
+    if (
+      billDetails.name === "" &&
+      billDetails.amountInNumber === "" &&
+      billDetails.date === ""
+    ) {
+      alert("Fill all the mandatory fields");
+      return;
+    }
     setBillInfo({ data: billDetails });
     const doc = new jsPDF({
       format: "a4",
       unit: "px",
+      compress: true,
     });
 
     // Adding the fonts.
@@ -32,7 +42,7 @@ function BillInput() {
 
   const [volunteerName, setVolunteerName] = useState(String);
   const [billAmount, setBillAmount] = useState(Number);
-  const [billAmountInWords, setBillAmountInWords] = useState(String)
+  const [billAmountInWords, setBillAmountInWords] = useState(String);
   const [billDate, setBillDate] = useState(String);
   const [billInfo, setBillInfo] = useState({});
 
@@ -48,7 +58,9 @@ function BillInput() {
   };
   const AmountChangeHandler = (event) => {
     setBillAmount(event.target.value);
-    setBillAmountInWords( toWords.convert(event.target.value, { currency: true }));
+    setBillAmountInWords(
+      toWords.convert(event.target.value, { currency: true })
+    );
   };
   const DateChangeHandler = (event) => {
     setBillDate(event.target.value);
@@ -56,36 +68,46 @@ function BillInput() {
 
   return (
     <div>
-      <form>
-        <div>
-          <label>Name</label>
-          <input
-            type="text"
-            onChange={NameChangeHandler}
-            value={volunteerName}
-          ></input>
+      <div className="flex">
+        <div className="form">
+          <form>
+            <div className="input-field">
+              <label>
+                Name<span className="star">*</span>
+              </label>
+              <input
+                type="text"
+                onChange={NameChangeHandler}
+                value={volunteerName}
+              ></input>
+            </div>
+            <div className="input-field">
+              <label>
+                Amount<span className="star">*</span>
+              </label>
+              <input
+                type="number"
+                onChange={AmountChangeHandler}
+                value={billAmount}
+              ></input>
+            </div>
+            <div className="input-field">
+              <label>
+                Date<span className="star">*</span>
+              </label>
+              <input
+                type="date"
+                onChange={DateChangeHandler}
+                value={billDate}
+              ></input>
+            </div>
+          </form>
+          <button className="generate-pdf-button" onClick={handleGeneratePdf}>
+            Generate PDF
+          </button>
         </div>
-        <div>
-          <label>Amount</label>
-          <input
-            type="number"
-            onChange={AmountChangeHandler}
-            value={billAmount}
-          ></input>
-        </div>
-        <div>
-          <label>Date</label>
-          <input
-            type="date"
-            onChange={DateChangeHandler}
-            value={billDate}
-          ></input>
-        </div>
-      </form>
-      <div>
-        <button className="button" onClick={handleGeneratePdf}>
-          Generate PDF
-        </button>
+      </div>
+      <div className="over-flow">
         <div ref={reportTemplateRef} className="pdf">
           {billInfo.data ? (
             <BillContent data={billInfo.data}></BillContent>
