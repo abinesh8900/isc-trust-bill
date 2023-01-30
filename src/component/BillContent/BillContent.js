@@ -1,5 +1,7 @@
 import "./BillContent.css";
 import logo from "./logo.png";
+import sign from "./sign.png";
+import bglogo from "./bglogo.png"
 
 function BillContent(props) {
   const regNum = "(Reg.No: 86/2019)";
@@ -17,6 +19,9 @@ function BillContent(props) {
               {props.data.amountInWords}.) from {props.data.name} as donation
               towards ISC MEDIA CUM FOUNDATION.
             </p>
+            <div className="bglogo">
+              <img src={bglogo} alt="bglogo-img" className="bglogo-img" />
+            </div>
 
             <div className="foot_area">
               <div className="pdf-footer">
@@ -25,7 +30,7 @@ function BillContent(props) {
                   <p className="date">{props.data.date}</p>
                 </div>
                 <div className="sign">
-                  <img src={logo} alt="logo" className="logo" />
+                  <img src={sign} alt="logo" className="sing" />
                   <p>Treasurer</p>
                   <p>
                     <strong>ISC MEDIA CUM FOUNDATION</strong>

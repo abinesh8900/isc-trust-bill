@@ -13,6 +13,12 @@
   height: 80px;
   width: auto;
 }
+.sing{
+    width: auto;
+    height: 55px;
+    position: relative;
+    bottom: -20px;
+}
 .trust-name {
   font-size: 22px;
   color: #ee7a09;
@@ -52,4 +58,18 @@
 }
 .place-date {
   text-align: left;
+}
+/* .bglogo{
+    background-image: url(./bglogo.png);
+    height: 200px;
+    width: auto;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+} */
+.bglogo-img{
+    width: auto;
+    height: 200px;
+    text-align: center;
 }
